@@ -35,7 +35,7 @@ def prepare_docs():
     roboDocs = roboLoader.load()
     docs.extend(roboDocs)
 
-    # Load Portal robot examples based on
+    # Load Portal robot examples based on configuration file and git repos.
     portalLoader = PortalLoader(url="https://robocorp.com/portal/robots.json")
     portalDocs = portalLoader.load()
     docs.extend(portalDocs)

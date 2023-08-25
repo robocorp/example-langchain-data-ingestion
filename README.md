@@ -1,22 +1,24 @@
-# Template: Python - Minimal
+# LLM data ingestion pipeline with Langchain & Robocorp
 
-This template leverages the new Python open-source structure [robo](https://github.com/robocorp/robo), the [libraries](https://github.com/robocorp/robo#libraries) from to same project as well.
-The full power of [rpaframework](https://github.com/robocorp/rpaframework) is also available for you on Python as a backup while we implement new Python libraries.
+This example shows you how to implement a data ingestion pipeline with Robocorp, using [Langchain](https://python.langchain.com/docs/get_started/introduction.html). The need for simple pipelines that run frequently have exploded, and one driver is [retrieval-augmented generation](https://www.promptingguide.ai/techniques/rag) (RAG) use cases, where the source data often needs to be loaded in to a vector database as embeddings.
 
-The template provides you with the basic structure of a Python project: logging out of the box and controlling your tasks without fiddling with the base Python stuff. The environment contains the most used libraries, so you do not have to start thinking about those right away. 
+The benefits of using Robocorp bots:
 
-👉 After running the bot, check out the `log.html` under the `output` -folder.
+- No infra needed: run and schdule workflows in the [Robocorp Control Room](https://cloud.robocorp.com) (4h/month runtime for free!)
+- If you need the workflow to run on-prem, that works too!
+- Easy management of Python environments between and dev and prod usage
+- Great and powerful tools for scraping data, e.g. with Playwright
+- Tens of prebuilt connectors for accessing systems like Salesforce, SAP, HubSport etc
+- It's all Python 🐍
 
-The template here is essentially empty, leaving you with a canvas to paint on.
+## TODO FROM THIS POINT ONWARDS
 
-Do note that with Robocorp tooling you:
-- Do NOT need Python installed
-- Should NOT be writing `pip install..`; the [conda.yaml](https://github.com/robocorp/template-python/blob/master/conda.yaml) is here for a reason.
-- You do not need to worry about Python's main -functions and, most importantly, the logging setup
+Contains three loaders:
 
-🚀 Now, go get'em
+- PortalLoader: Reads a JSON configuration file, and then traverses multiple github repo's to get descriptions and code examples.
+- RoboLoader: Reads markdown from a gihub repo that contains python library documentation
+- RPALoader: Reads a configuration JSON file, and documentation website contents using BeautifulSoup4.
 
-For more information, do not forget to check out the following:
-* [Robocorp Documentation -site](https://robocorp.com/docs)
-* [Portal for more examples](https://robocorp.com/portal)
-* [robo repo](https://github.com/robocorp/robo) as this will developed a lot...
+Uses Chroma now in this example, just creates it but doesn't do anything. It's there because goes without any credentials. We use pgvector internally.
+
+Short Control Room screen recording (coming soon)
