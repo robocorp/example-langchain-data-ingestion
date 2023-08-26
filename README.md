@@ -13,6 +13,8 @@ The benefits of using Robocorp for RAG data ingestion:
 - Tens of prebuilt connectors for accessing systems like Salesforce, SAP, HubSport etc
 - It's all Python 🐍
 
+This bot is a close replica of the actual production bot used to feed the data for [ReMark💬](https://chat.robocorp.com), a code gen assistant specifically trained to help developers building automation bots on Roboccorp. We have only omitted the parts that require access to the private repositories.
+
 ## TODO FROM THIS POINT ONWARDS
 
 ## Setup
