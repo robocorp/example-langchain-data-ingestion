@@ -15,15 +15,13 @@ The benefits of using Robocorp for RAG data ingestion:
 
 This bot is a close replica of the actual production bot used to feed the data for [ReMark💬](https://chat.robocorp.com), a code gen assistant specifically trained to help developers building automation bots on Roboccorp. We have only omitted the parts that require access to the private repositories.
 
-## TODO FROM THIS POINT ONWARDS
-
 ## Setup
 
 The following configurations are needed to run the ingestion pipeline.
 
 - VS Code with [Robocorp Code](https://marketplace.visualstudio.com/items?itemName=robocorp.robocorp-code) connected to your Robocorp workspace (get a free account [here](https://cloud.robocorp.com))
 - [OpenAI](https://platform.openai.com/) API key in Robocorp Vault called `OpenAI` with key named `key`.
-- Configuration data stored in Control Room Asset Storage. Below is a sample that works.
+- Configuration data stored in Control Room Asset Storage with name `rag_loader_config`. Below is a sample that works.
 
 ```json
 {
@@ -53,4 +51,7 @@ For each of the loaders, the URL and black/whitelist data is read from the Contr
 
 ## Control Room
 
-Short Control Room screen recording (coming soon)
+Follow the video to see how to set things up from a Github repo in Robocorp:
+
+https://github.com/robocorp/example-langchain-data-ingestion/assets/40179958/c1b81119-d4ff-4445-aba4-bd752247f733
+
