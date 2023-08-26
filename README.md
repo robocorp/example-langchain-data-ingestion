@@ -1,12 +1,14 @@
 # LLM data ingestion pipeline with Langchain & Robocorp
 
-This example shows you how to implement a data ingestion pipeline with Robocorp, using [Langchain](https://python.langchain.com/docs/get_started/introduction.html). The need for simple pipelines that run frequently have exploded, and one driver is [retrieval-augmented generation](https://www.promptingguide.ai/techniques/rag) (RAG) use cases, where the source data often needs to be loaded in to a vector database as embeddings.
+This example shows you how to implement a LLM data ingestion pipeline with Robocorp, using [Langchain](https://python.langchain.com/docs/get_started/introduction.html). The need for simple pipelines that run frequently have exploded, and one driver is [retrieval-augmented generation](https://www.promptingguide.ai/techniques/rag) (RAG) use cases, where the source data needs to be loaded in to a vector database as embeddings frequently.
 
-The benefits of using Robocorp bots:
+The benefits of using Robocorp for RAG data ingestion:
 
-- No infra needed: run and schdule workflows in the [Robocorp Control Room](https://cloud.robocorp.com) (4h/month runtime for free!)
-- If you need the workflow to run on-prem, that works too!
-- Easy management of Python environments between and dev and prod usage
+- Zero infra: run and schdule workflows in the [Robocorp Control Room](https://cloud.robocorp.com) (4h/month runtime for free!)
+- Also supports running the workflows [on-prem](https://robocorp.com/docs/control-room/unattended/worker-setups)
+- Connect your git repo and your new updates deploy automatically to workers in the cloud
+- Use Asset Storage to manage configurations - update without code changes.
+- Easy management of Python environments between and dev and prod usage with simple [conda.yaml](conda.yaml)s
 - Great and powerful tools for scraping data, e.g. with Playwright
 - Tens of prebuilt connectors for accessing systems like Salesforce, SAP, HubSport etc
 - It's all Python 🐍

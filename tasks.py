@@ -1,6 +1,6 @@
 from typing import List
 from robocorp.tasks import task
-from robocorp import vault
+from robocorp import vault, storage
 
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.docstore.document import Document
@@ -11,44 +11,46 @@ from loaders.Robo import RoboLoader
 from loaders.Portal import PortalLoader
 
 
-
 @task
 def prepare_docs():
+    """Ingest data from various sources and create embeddings to the
+    vector db."""
+
+    # Get credentials from Robocorp Control Room Vault
     openai_secrets = vault.get_secret("OpenAI")
+
+    # Get configuration data from Robocorp Control Room Asset Storage
+    config = storage.get_json("rag_loader_config")
+
     docs: List[Document] = []
 
     # Load RPA Framework from a documentation JSON file
     rpaLoader = RPALoader(
-        url="https://rpaframework.org/latest.json",
-        blacklist=["RPA.Dialogs", "RPA.Browser.common", "RPA.version"],
+        url=config["rpa"]["url"],
+        black_list=config["rpa"]["black_list"],
     )
     rpaDocs = rpaLoader.load()
     docs.extend(rpaDocs)
 
-    # Load Robo Framework docs from Git repo
+    # Load Robo Framework docs from Git repo and markdown files.
     roboLoader = RoboLoader(
-        repo_url="https://github.com/robocorp/robo.git",
-        white_list=[
-            "README.md",
-        ],
+        repo_url=config["robo"]["url"],
+        white_list=config["robo"]["white_list"],
     )
     roboDocs = roboLoader.load()
     docs.extend(roboDocs)
 
     # Load Portal robot examples based on configuration file and git repos.
-    portalLoader = PortalLoader(url="https://robocorp.com/portal/robots.json")
+    portalLoader = PortalLoader(url=config["portal"]["url"])
     portalDocs = portalLoader.load()
     docs.extend(portalDocs)
 
-    # NOTE: This just cratest the embeddings locally, doesn't actually do anyt
-    # anything with them afterwards.
-    # TODO: Use a hosted vectordb as a showcase.
     create_embeddings(docs, openai_secrets)
-
 
 def create_embeddings(documents, openai_secrets):
     embeddings = OpenAIEmbeddings(openai_api_key=openai_secrets["key"])
 
+    # TODO: Use a cloud hosted vectordb as a showcase.
     db = Chroma.from_documents(
         documents=documents,
         embedding=embeddings,

@@ -18,12 +18,12 @@ class RPALoader(BaseLoader):
 
     Args:
         url: URL to the target RPA Framework documentation definitions
-        blacklist: List of libraries that should be skipped from loading
+        black_list: List of libraries that should be skipped from loading
     """
 
-    def __init__(self, url: str, blacklist: List[str]):
+    def __init__(self, url: str, black_list: List[str]):
         self.url = url
-        self.blacklist = blacklist
+        self.black_list = black_list
 
     def load(self) -> List[Document]:
         response = requests.get(self.url)
@@ -36,7 +36,7 @@ class RPALoader(BaseLoader):
         output: List[Document] = []
 
         for lib_name in json_data:
-            if lib_name in self.blacklist:
+            if lib_name in self.black_list:
                 continue
 
             library = json_data[lib_name]
