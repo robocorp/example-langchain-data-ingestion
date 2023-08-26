@@ -13,6 +13,10 @@ environmentConfigs:
   - environment_darwin_amd64_freeze.yaml
   - conda.yaml
 
+# condaConfigFile is being phased out in favor of environmentConfigs,
+# but as of 8/2023 needed to enable environment caching in cloud containers
+condaConfigFile: conda.yaml
+
 ignoreFiles:
   - .gitignore
 artifactsDir: output
