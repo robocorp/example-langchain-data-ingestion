@@ -51,7 +51,14 @@ For each of the loaders, the URL and black/whitelist data is read from the Contr
 
 ## Control Room
 
-Follow the video to see how to set things up from a Github repo in Robocorp:
+Follow the video to see how to set things up from a Github repo in Robocorp. This is what you'll see:
+
+- Connect to your repo (updates will be automatically deployed)
+- Create an Asset for config data (urls, whitelist, blacklist)
+- Create a Process, which basically combines the repo with a worker, in this case Robocorp cloud container
+- Configure a schedule
+- Set alerts, for example only for failed runs
+- RUN IT!
 
 https://github.com/robocorp/example-langchain-data-ingestion/assets/40179958/c1b81119-d4ff-4445-aba4-bd752247f733
 
