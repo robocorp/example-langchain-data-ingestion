@@ -15,12 +15,40 @@ The benefits of using Robocorp for RAG data ingestion:
 
 ## TODO FROM THIS POINT ONWARDS
 
-Contains three loaders:
+## Setup
+
+The following configurations are needed to run the ingestion pipeline.
+
+- VS Code with [Robocorp Code](https://marketplace.visualstudio.com/items?itemName=robocorp.robocorp-code) connected to your Robocorp workspace (get a free account [here](https://cloud.robocorp.com))
+- [OpenAI](https://platform.openai.com/) API key in Robocorp Vault called `OpenAI` with key named `key`.
+- Configuration data stored in Control Room Asset Storage. Below is a sample that works.
+
+```json
+{
+  "portal": {
+    "url": "https://robocorp.com/portal/robots.json"
+  },
+  "robo": {
+    "url": "https://github.com/robocorp/robo.git",
+    "white_list": ["README.md"]
+  },
+  "rpa": {
+    "url": "https://rpaframework.org/latest.json",
+    "black_list": ["RPA.Dialogs", "RPA.Browser.common", "RPA.version"]
+  }
+}
+```
+
+## The bot
+
+The bot contains three loaders as an example, each a class in [loaders directory](/loaders/):
 
 - PortalLoader: Reads a JSON configuration file, and then traverses multiple github repo's to get descriptions and code examples.
 - RoboLoader: Reads markdown from a gihub repo that contains python library documentation
 - RPALoader: Reads a configuration JSON file, and documentation website contents using BeautifulSoup4.
 
-Uses Chroma now in this example, just creates it but doesn't do anything. It's there because goes without any credentials. We use pgvector internally.
+For each of the loaders, the URL and black/whitelist data is read from the Control Room Asset Storage, meaning that you can add more white/blacklisted entries without code changes or deployments.
+
+## Control Room
 
 Short Control Room screen recording (coming soon)
