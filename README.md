@@ -19,7 +19,7 @@ This bot is a close replica of the actual production bot used to feed the data f
 
 The following configurations are needed to run the ingestion pipeline.
 
-- VS Code with [Robocorp Code](https://marketplace.visualstudio.com/items?itemName=robocorp.robocorp-code) connected to your Robocorp workspace (get a free account [here](https://cloud.robocorp.com))
+- Get [VS Code](https://code.visualstudio.com/) with [Robocorp Code](https://marketplace.visualstudio.com/items?itemName=robocorp.robocorp-code) connected to your Robocorp workspace (get a free account [here](https://cloud.robocorp.com))
 - [OpenAI](https://platform.openai.com/) API key in Robocorp Vault called `OpenAI` with key named `key`.
 - Configuration data stored in Control Room Asset Storage with name `rag_loader_config`. Below is a sample that works.
 
