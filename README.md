@@ -60,5 +60,4 @@ Follow the video to see how to set things up from a GitHub repo in Robocorp. Thi
 - Set alerts, for example, only for failed runs
 - RUN IT!
 
-https://github.com/robocorp/example-langchain-data-ingestion/assets/40179958/c1b81119-d4ff-4445-aba4-bd752247f733
-
+https://cdn.robocorp.com/portal/rag-loader-control-room.mp4
