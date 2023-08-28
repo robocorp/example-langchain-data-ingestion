@@ -2,7 +2,7 @@
 
 **Are you curious about what's happening behind the scenes with [ReMark💬](https://chat.robocorp.com), a code-gen assistant specifically trained to help developers build automation bots on Roboccorp? We are exposing (almost) everything here in how we create vector embeddings from various sources! ReMark💬 is trained on Robocorp documentation and examples, which are either on JSON files, GitHub repos or websites.**
 
-This example shows you how to implement an LLM data ingestion pipeline with Robocorp using [Langchain](https://python.langchain.com/docs/get_started/introduction.html). The need for simple pipelines that run frequently has exploded, and one driver is [retrieval-augmented generation](https://www.promptingguide.ai/techniques/rag) (RAG) use cases, where the source data needs to be loaded into a vector database as embeddings frequently.
+This example shows how to implement an LLM data ingestion pipeline with Robocorp using [Langchain](https://python.langchain.com/docs/get_started/introduction.html). The need for simple pipelines that run frequently has exploded, and one driver is [retrieval-augmented generation](https://www.promptingguide.ai/techniques/rag) (RAG) use cases, where the source data needs to be loaded into a vector database as embeddings frequently.
 
 The benefits of using Robocorp for RAG data ingestion:
 
@@ -51,6 +51,8 @@ For each loader, the URL and black/whitelist data are read from the Control Room
 
 ## Control Room
 
+Control Room allows you to repeatedly and reliably run the data loaders at your chosen schedule and configuration. It supports alerts on errors, so you'll always be aware of what's happening.
+
 Follow the video to see how to set things up from a GitHub repo in Robocorp. This is what you'll see:
 
 - Connect to your repo (updates will be automatically deployed)
@@ -60,4 +62,4 @@ Follow the video to see how to set things up from a GitHub repo in Robocorp. Thi
 - Set alerts, for example, only for failed runs
 - RUN IT!
 
-https://cdn.robocorp.com/portal/rag-loader-control-room.mp4
+![How to go from repo to ops](https://cdn.robocorp.com/portal/rag-loader-control-room.mp4)
