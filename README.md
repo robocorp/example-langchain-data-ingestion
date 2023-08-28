@@ -7,7 +7,7 @@ This example shows you how to implement an LLM data ingestion pipeline with Robo
 The benefits of using Robocorp for RAG data ingestion:
 
 - Zero infra: run and schedule workflows in the [Robocorp Control Room](https://cloud.robocorp.com) (4h/month runtime for free!)
-- Also supports running the workflows [on-prem](https://robocorp.com/docs/control-room/unattended/worker-setups)
+- Also supports running the workflows on [self-hosted infrastructure](https://robocorp.com/docs/control-room/unattended/worker-setups)
 - Connect your git repo, and your new updates deploy automatically to workers in the cloud
 - Use Asset Storage to manage configurations - update without code changes.
 - Easy management of Python environments between dev and prod usage with simple [conda.yaml](conda.yaml)s
