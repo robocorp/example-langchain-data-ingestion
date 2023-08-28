@@ -62,4 +62,4 @@ Follow the video to see how to set things up from a GitHub repo in Robocorp. Thi
 - Set alerts, for example, only for failed runs
 - RUN IT!
 
-https://cdn.robocorp.com/portal/rag-loader-control-room.mp4
+![Set up your document loaders in Control Room](https://cdn.robocorp.com/portal/rag-loader-control-room.mp4)
