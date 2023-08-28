@@ -62,4 +62,4 @@ Follow the video to see how to set things up from a GitHub repo in Robocorp. Thi
 - Set alerts, for example, only for failed runs
 - RUN IT!
 
-![How to go from repo to ops](https://cdn.robocorp.com/portal/rag-loader-control-room.mp4)
+https://cdn.robocorp.com/portal/rag-loader-control-room.mp4
