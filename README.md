@@ -1,6 +1,6 @@
 # LLM data ingestion pipeline with Langchain & Robocorp
 
-Are you curious about what's happening behind the scenes with [ReMark💬](https://chat.robocorp.com), a code-gen assistant specifically trained to help developers build automation bots on Roboccorp? We are exposing (almost) everything here in how we create vector embeddings from various sources! ReMark💬 is trained on Robocorp documentation and examples, which are either on JSON files, GitHub repos or websites.
+**Are you curious about what's happening behind the scenes with [ReMark💬](https://chat.robocorp.com), a code-gen assistant specifically trained to help developers build automation bots on Roboccorp? We are exposing (almost) everything here in how we create vector embeddings from various sources! ReMark💬 is trained on Robocorp documentation and examples, which are either on JSON files, GitHub repos or websites.**
 
 This example shows you how to implement an LLM data ingestion pipeline with Robocorp using [Langchain](https://python.langchain.com/docs/get_started/introduction.html). The need for simple pipelines that run frequently has exploded, and one driver is [retrieval-augmented generation](https://www.promptingguide.ai/techniques/rag) (RAG) use cases, where the source data needs to be loaded into a vector database as embeddings frequently.
 
