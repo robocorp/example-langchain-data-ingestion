@@ -9,10 +9,9 @@ The benefits of using Robocorp for RAG data ingestion:
 - Zero infra: run and schedule workflows in the [Robocorp Control Room](https://cloud.robocorp.com) (4h/month runtime for free!)
 - Also supports running the workflows on [self-hosted infrastructure](https://robocorp.com/docs/control-room/unattended/worker-setups)
 - Connect your git repo, and your new updates deploy automatically to workers in the cloud
-- Use Asset Storage to manage configurations - update without code changes.
-- Easy management of Python environments between dev and prod usage with simple [conda.yaml](conda.yaml)s
-- Great and powerful tools for scraping data, e.g. with Playwright
-- Tens of prebuilt connectors for accessing systems like Salesforce, SAP, HubSpot, etc
+- Use Asset Storage to manage configurations - update without code changes
+- Easy management of Python environments between dev and prod
+- Huge ecosystem of tools like [Llamaindex](https://www.llamaindex.ai/), [Playwright](https://playwright.dev/python/), [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/)
 - It's all Python 🐍
 
 ## Setup
@@ -60,6 +59,6 @@ Follow the video to see how to set things up from a GitHub repo in Robocorp. Thi
 - Create a Process that combines the repo with a worker, in this case, the Robocorp cloud container
 - Configure a schedule
 - Set alerts, for example, only for failed runs
-- RUN IT!
-
-![Set up your document loaders in Control Room](https://cdn.robocorp.com/portal/rag-loader-control-room.mp4)
+- RUN IT 🏃
+  
+[![rag-loader-video](https://github.com/robocorp/example-langchain-data-ingestion/assets/40179958/1fabbbe4-1002-4a24-9fcc-7ae4b125f5c5)](https://cdn.robocorp.com/portal/rag-loader-control-room.mp4)
