@@ -60,5 +60,5 @@ Follow the video to see how to set things up from a GitHub repo in Robocorp. Thi
 - Configure a schedule
 - Set alerts, for example, only for failed runs
 - RUN IT 🏃
-  
-[![rag-loader-video](https://github.com/robocorp/example-langchain-data-ingestion/assets/40179958/1fabbbe4-1002-4a24-9fcc-7ae4b125f5c5)](https://cdn.robocorp.com/portal/rag-loader-control-room.mp4)
+
+[![Set up RAG data loader in Control Room](https://i.ytimg.com/vi/nI03s7ibcek/maxresdefault.jpg)](https://www.youtube.com/watch?v=nI03s7ibcek "Set up RAG data loader in Control Room")
